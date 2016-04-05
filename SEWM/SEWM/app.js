@@ -10,8 +10,6 @@ var Greeter = (function () {
         var _this = this;
         this.timerToken = setInterval(function () { return _this.span.innerHTML = new Date().toUTCString(); }, 500);
         var myNumber = this.timerToken;
-        while (this.timerToken - myNumber < 500) {
-        }
         this.stop();
     };
     Greeter.prototype.stop = function () {
@@ -35,8 +33,5 @@ window.onload = function () {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
     greeter.start();
-    var car = new Car("V8");
-    car.start();
-    car.stop();
 };
 //# sourceMappingURL=app.js.map
