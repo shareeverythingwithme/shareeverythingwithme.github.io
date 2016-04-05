@@ -26,15 +26,16 @@ var Car = (function () {
     Car.prototype.stop = function () {
         alert("engine stopped: " + this.engine);
     };
+    Car.prototype.stop_with_input = function (input_string) {
+        alert(input_string);
+    };
     return Car;
 }());
 window.onload = function () {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
     greeter.start();
+    var txtName = document.getElementById("txtboxFullLegalName");
+    alert('hello');
 };
-function onBtnSubmitClicked() {
-    var car = new Car("V8");
-    car.start();
-}
 //# sourceMappingURL=app.js.map

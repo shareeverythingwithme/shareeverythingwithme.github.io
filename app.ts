@@ -33,15 +33,15 @@ class Car {
     stop() {
         alert("engine stopped: " + this.engine);
     }
+    stop_with_input(input_string: string) {
+        alert(input_string);
+    }
 }
 
 window.onload = () => {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
     greeter.start();
+    var txtName = document.getElementById("txtboxFullLegalName")
+    alert('hello');
 };
-
-function onBtnSubmitClicked() {
-    var car = new Car("V8");
-    car.start();
-}
