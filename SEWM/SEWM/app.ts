@@ -13,6 +13,11 @@
 
     start() {
         this.timerToken = setInterval(() => this.span.innerHTML = new Date().toUTCString(), 500);
+        var myNumber = this.timerToken;
+        while (this.timerToken - myNumber < 500) {
+
+        }
+        this.stop();
     }
 
     stop() {
@@ -21,8 +26,24 @@
 
 }
 
+class Car {
+    engine: string;
+    constructor(engine: string) {
+        this.engine = engine;
+    }
+    start() {
+        alert("engine started: " + this.engine);
+    }
+    stop() {
+        alert("engine stopped: " + this.engine);
+    }
+}
+
 window.onload = () => {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
     greeter.start();
+    var car = new Car("V8");
+    car.start();
+    car.stop();
 };
