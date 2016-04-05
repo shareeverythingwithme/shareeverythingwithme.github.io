@@ -10,7 +10,6 @@ var Greeter = (function () {
         var _this = this;
         this.timerToken = setInterval(function () { return _this.span.innerHTML = new Date().toUTCString(); }, 500);
         var myNumber = this.timerToken;
-        this.stop();
     };
     Greeter.prototype.stop = function () {
         clearTimeout(this.timerToken);
