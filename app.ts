@@ -40,3 +40,8 @@ window.onload = () => {
     var greeter = new Greeter(el);
     greeter.start();
 };
+
+function onBtnSubmitClicked() {
+    var car = new Car("V8");
+    car.start();
+}
