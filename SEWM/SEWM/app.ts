@@ -38,10 +38,6 @@ class Car {
     }
 }
 
-class Cars {
-    cars : List<Car>;
-}
-
 class Map<T> {
     private items: { [key: string]: T };
 
@@ -59,26 +55,6 @@ class Map<T> {
 
     get(key: string): T {
         return this.items[key];
-    }
-}
-
-class List<T> {
-    private items: Array<T>;
-
-    constructor() {
-        this.items = [];
-    }
-
-    size(): number {
-        return this.items.length;
-    }
-
-    add(value: T): void {
-        this.items.push(value);
-    }
-
-    get(index: number): T {
-        return this.items[index];
     }
 }
 
