@@ -18,7 +18,7 @@ var Greeter = (function () {
 }());
 var BSTNode = (function () {
     function BSTNode(input) {
-        this.value = input;
+        this.bstNodeValue = input;
         this.bstLeft = null;
         this.bstRight = null;
     }

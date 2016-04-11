@@ -23,11 +23,11 @@
 }
 
 class BSTNode {
-    value: number;
+    bstNodeValue : number;
     bstLeft: BSTNode;
     bstRight: BSTNode;
     constructor(input: number) {
-        this.value = input;
+        this.bstNodeValue  = input;
         this.bstLeft = null;
         this.bstRight = null;
     }
