@@ -38,6 +38,10 @@ class Car {
     }
 }
 
+class Cars {
+    cars : List<Car>;
+}
+
 class Map<T> {
     private items: { [key: string]: T };
 

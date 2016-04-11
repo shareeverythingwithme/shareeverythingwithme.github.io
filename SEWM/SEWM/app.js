@@ -31,6 +31,11 @@ var Car = (function () {
     };
     return Car;
 }());
+var Cars = (function () {
+    function Cars() {
+    }
+    return Cars;
+}());
 var Map = (function () {
     function Map() {
         this.items = {};
