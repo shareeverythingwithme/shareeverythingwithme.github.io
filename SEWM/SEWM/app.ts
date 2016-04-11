@@ -38,10 +38,90 @@ class Car {
     }
 }
 
+class Map<T> {
+    private items: { [key: string]: T };
+
+    constructor() {
+        this.items = {};
+    }
+
+    add(key: string, value: T): void {
+        this.items[key] = value;
+    }
+
+    has(key: string): boolean {
+        return key in this.items;
+    }
+
+    get(key: string): T {
+        return this.items[key];
+    }
+}
+
+class List<T> {
+    private items: Array<T>;
+
+    constructor() {
+        this.items = [];
+    }
+
+    size(): number {
+        return this.items.length;
+    }
+
+    add(value: T): void {
+        this.items.push(value);
+    }
+
+    get(index: number): T {
+        return this.items[index];
+    }
+}
+
+class ListItem<T> {
+    private list: List<T>;
+    private index: number;
+
+    public value: T;
+
+    constructor(list: List<T>, value: T, index: number) {
+        this.list = list;
+        this.index = index;
+        this.value = value;
+    }
+
+    prev(): ListItem<T> {
+        return this.list.get(this.index - 1);
+    }
+
+    next(): ListItem<T> {
+        return this.list.get(this.index + 1);
+    }
+}
+
+class List<T> {
+    private items: Array<ListItem<T>>;
+
+    constructor() {
+        this.items = [];
+    }
+
+    size(): number {
+        return this.items.length;
+    }
+
+    add(value: T): void {
+        this.items.push(new ListItem<T>(this, value, this.size()));
+    }
+
+    get(index: number): ListItem<T> {
+        return this.items[index];
+    }
+}
+
 window.onload = () => {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
     greeter.start();
     var txtName = document.getElementById("txtboxFullLegalName")
-    alert('hello');
 };
