@@ -16,6 +16,14 @@ var Greeter = (function () {
     };
     return Greeter;
 }());
+var BSTNode = (function () {
+    function BSTNode(input) {
+        this.value = input;
+        this.bstLeft = null;
+        this.bstRight = null;
+    }
+    return BSTNode;
+}());
 window.onload = function () {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);

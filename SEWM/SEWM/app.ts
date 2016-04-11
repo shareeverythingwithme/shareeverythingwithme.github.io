@@ -22,6 +22,17 @@
 
 }
 
+class BSTNode {
+    value: number;
+    bstLeft: BSTNode;
+    bstRight: BSTNode;
+    constructor(input: number) {
+        this.value = input;
+        this.bstLeft = null;
+        this.bstRight = null;
+    }
+}
+
 window.onload = () => {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
